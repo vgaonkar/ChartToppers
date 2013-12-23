@@ -3,7 +3,7 @@ ChartToppers
 
 An iPhone app that displays the current top apps in the app store.
 
-This app allows the user to browse through the current top free apps, albums, books, movies, tv shows, and iTunesU courses on the app store. Clicking on an app will allow the user to see the details about that app. If the user is interested in buying a certain item, this app will bring him/her to the app store. Items can be shared with friends via email and social media like Facebook and Twitter. Any item can be marked as a 'favorite' which will then be displayed in the 'Favorites' tab. The list of favorites is persisted so it is available on each launch. 
+This app allows the user to browse through the current top free apps, albums, books, movies, tv shows, and iTunesU courses on the app store. The list of apps can be refreshed at any time using a swipe down gesture. Clicking on an app will allow the user to see the details about that app. If the user is interested in buying a certain item, this app will bring him/her to the app store. Items can be shared with friends via email and social media like Facebook and Twitter. Any item can be marked as a 'favorite' which will then be displayed in the 'Favorites' tab. The list of favorites is persisted so it is available on each launch. 
 
 Screenshots:
 
