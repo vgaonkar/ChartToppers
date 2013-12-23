@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JuQ-fy-SVp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iqm-Tw-5Ti">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="JuQ-fy-SVp" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bjc-qT-sey">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qKR-6L-7hU" kind="relationship" relationship="viewControllers" id="LgV-s3-IR0"/>
+                        <segue destination="wd5-YH-yta" kind="relationship" relationship="viewControllers" id="ozw-nv-0jc"/>
+                        <segue destination="gpS-L7-V3g" kind="relationship" relationship="viewControllers" id="yTq-dQ-Atb"/>
+                        <segue destination="H4B-zC-B7M" kind="relationship" relationship="viewControllers" id="1Sb-gU-XGz"/>
+                        <segue destination="hhK-tZ-nzk" kind="relationship" relationship="viewControllers" id="B8Y-bb-pji"/>
+                        <segue destination="arF-60-yWP" kind="relationship" relationship="viewControllers" id="amF-15-0Ya"/>
+                        <segue destination="rc9-Rv-KTK" kind="relationship" relationship="viewControllers" id="X8b-oe-YPy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9p-cB-V9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-980" y="-571"/>
+        </scene>
+        <!--Apps Table View Controller - Free Apps-->
+        <scene sceneID="qwb-gK-6SX">
+            <objects>
+                <tableViewController id="aAM-5S-sNQ" customClass="IOSAppsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" id="f2R-jM-mhS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Media Item" rowHeight="46" id="76X-R7-Y7O" customClass="ITunesMediaItemTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="5Gg-3O-cXG"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbf-TG-6ld">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="LeN-bV-X8n"/>
+                                                <constraint firstAttribute="height" constant="25" id="SKr-gO-grV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                            <color key="textColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekC-27-XYO">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="b2H-Bx-xYq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="13"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rank" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27M-NT-YtE">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="cGK-X1-qqJ"/>
+                                                <constraint firstAttribute="height" constant="21" id="hGQ-PD-GB1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHC-Lo-3sU">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="31I-Mh-GBe"/>
+                                                <constraint firstAttribute="height" constant="40" id="Jf2-yu-TWg"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="ekC-27-XYO" firstAttribute="leading" secondItem="sHC-Lo-3sU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0cu-8H-CHF"/>
+                                    <constraint firstItem="ekC-27-XYO" firstAttribute="top" secondItem="76X-R7-Y7O" secondAttribute="top" constant="20" type="default" id="80G-1t-J96"/>
+                                    <constraint firstItem="hbf-TG-6ld" firstAttribute="top" secondItem="76X-R7-Y7O" secondAttribute="top" type="default" id="Ibf-CP-s1L"/>
+                                    <constraint firstItem="5Gg-3O-cXG" firstAttribute="centerY" secondItem="sHC-Lo-3sU" secondAttribute="centerY" type="default" id="LCt-Tr-TMo"/>
+                                    <constraint firstAttribute="trailing" secondItem="27M-NT-YtE" secondAttribute="trailing" constant="25" id="LwQ-Yr-nkV"/>
+                                    <constraint firstItem="5Gg-3O-cXG" firstAttribute="centerX" secondItem="sHC-Lo-3sU" secondAttribute="centerX" type="default" id="SVc-ea-oaW"/>
+                                    <constraint firstItem="hbf-TG-6ld" firstAttribute="trailing" secondItem="ekC-27-XYO" secondAttribute="trailing" type="default" id="Shd-D1-lAQ"/>
+                                    <constraint firstItem="5Gg-3O-cXG" firstAttribute="centerY" secondItem="76X-R7-Y7O" secondAttribute="centerY" type="default" id="cgN-tq-KXj"/>
+                                    <constraint firstItem="27M-NT-YtE" firstAttribute="bottom" secondItem="5Gg-3O-cXG" secondAttribute="bottom" type="default" id="keA-Zd-Lg1"/>
+                                    <constraint firstItem="sHC-Lo-3sU" firstAttribute="leading" secondItem="76X-R7-Y7O" secondAttribute="leading" constant="8" id="mcX-yk-ldS"/>
+                                    <constraint firstItem="hbf-TG-6ld" firstAttribute="leading" secondItem="sHC-Lo-3sU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="vp1-qW-BlG"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="mediaItemArtist" destination="ekC-27-XYO" id="l5w-8e-6qj"/>
+                                    <outlet property="mediaItemImage" destination="sHC-Lo-3sU" id="Wa0-nR-tfd"/>
+                                    <outlet property="mediaItemRank" destination="27M-NT-YtE" id="tSU-aK-lLd"/>
+                                    <outlet property="mediaItemTitle" destination="hbf-TG-6ld" id="Yd5-jK-Da0"/>
+                                    <outlet property="spinner" destination="5Gg-3O-cXG" id="Mvz-wk-WKG"/>
+                                    <segue destination="jrk-tL-bfG" kind="push" identifier="Show Details" id="68u-e7-yyb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aAM-5S-sNQ" id="4IN-9v-ceb"/>
+                            <outlet property="delegate" destination="aAM-5S-sNQ" id="zyU-cQ-ezM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Free Apps" id="ecP-iR-ZGc"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Mnq-2a-Q6G">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kjQ-3m-a2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="-1750"/>
+        </scene>
+        <!--Favorites Table View Controller - Favorites-->
+        <scene sceneID="Lef-4D-Wu4">
+            <objects>
+                <tableViewController id="M4i-uI-nKL" customClass="FavoritesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" id="vGy-nf-4qC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Media Item" rowHeight="46" id="s1H-PG-IlI" customClass="ITunesMediaItemTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ypi-FV-A5s"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25x-Ca-WVv">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="pKs-s3-ovZ"/>
+                                                <constraint firstAttribute="width" constant="200" id="z0x-Xk-w0A"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                            <color key="textColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDA-QA-fUb">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="34D-lQ-LvD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="13"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rank" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGh-7L-h2D">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="TMg-hV-ysd"/>
+                                                <constraint firstAttribute="width" constant="36" id="jwC-K3-NxA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfH-Rn-8gR">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="kI4-Tz-LbJ"/>
+                                                <constraint firstAttribute="width" constant="40" id="qmU-CZ-l64"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="ypi-FV-A5s" firstAttribute="centerY" secondItem="bfH-Rn-8gR" secondAttribute="centerY" type="default" id="8ms-Qy-glf"/>
+                                    <constraint firstItem="MDA-QA-fUb" firstAttribute="top" secondItem="s1H-PG-IlI" secondAttribute="top" constant="20" type="default" id="CmC-vx-QBH"/>
+                                    <constraint firstItem="dGh-7L-h2D" firstAttribute="bottom" secondItem="ypi-FV-A5s" secondAttribute="bottom" type="default" id="E2b-Xp-8zA"/>
+                                    <constraint firstItem="25x-Ca-WVv" firstAttribute="trailing" secondItem="MDA-QA-fUb" secondAttribute="trailing" type="default" id="Iii-3R-TSb"/>
+                                    <constraint firstItem="MDA-QA-fUb" firstAttribute="leading" secondItem="bfH-Rn-8gR" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Qnm-Yq-TT7"/>
+                                    <constraint firstItem="25x-Ca-WVv" firstAttribute="leading" secondItem="bfH-Rn-8gR" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="S2O-Dg-gJW"/>
+                                    <constraint firstItem="bfH-Rn-8gR" firstAttribute="leading" secondItem="s1H-PG-IlI" secondAttribute="leading" constant="8" id="Vgv-Uw-9b9"/>
+                                    <constraint firstAttribute="trailing" secondItem="dGh-7L-h2D" secondAttribute="trailing" constant="25" id="ZMu-01-dmk"/>
+                                    <constraint firstItem="ypi-FV-A5s" firstAttribute="centerX" secondItem="bfH-Rn-8gR" secondAttribute="centerX" type="default" id="dVU-2H-zMh"/>
+                                    <constraint firstItem="25x-Ca-WVv" firstAttribute="top" secondItem="s1H-PG-IlI" secondAttribute="top" type="default" id="erW-SZ-krG"/>
+                                    <constraint firstItem="ypi-FV-A5s" firstAttribute="centerY" secondItem="s1H-PG-IlI" secondAttribute="centerY" type="default" id="j65-b3-qzU"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="mediaItemArtist" destination="MDA-QA-fUb" id="J4w-zN-L1Z"/>
+                                    <outlet property="mediaItemImage" destination="bfH-Rn-8gR" id="fBR-ue-1kN"/>
+                                    <outlet property="mediaItemRank" destination="dGh-7L-h2D" id="8OW-3j-NaA"/>
+                                    <outlet property="mediaItemTitle" destination="25x-Ca-WVv" id="muW-Az-FeU"/>
+                                    <outlet property="spinner" destination="ypi-FV-A5s" id="u4D-BI-f6T"/>
+                                    <segue destination="jrk-tL-bfG" kind="push" identifier="Show Details" id="UWA-uR-AF1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M4i-uI-nKL" id="8nn-xb-BT1"/>
+                            <outlet property="delegate" destination="M4i-uI-nKL" id="e1t-FB-Tq2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorites" id="fal-Ub-rlu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRo-wm-IyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="-2364"/>
+        </scene>
+        <!--Tunes Media Item Detail View Controller-->
+        <scene sceneID="u86-AV-EfT">
+            <objects>
+                <tableViewController id="jrk-tL-bfG" customClass="ITunesMediaItemDetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="iWS-2n-Y9P">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="bVQ-Gi-mCN">
+                                <cells>
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="110" id="Jhb-ox-92t">
+                                        <rect key="frame" x="0.0" y="10" width="320" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dHB-fl-EaF"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="05o-4c-Wj8">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="103" id="bEa-hJ-JzY"/>
+                                                        <constraint firstAttribute="width" constant="103" id="nPd-3W-cI5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDE-ak-jbN">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Y4a-0n-tHA"/>
+                                                        <constraint firstAttribute="width" constant="158" id="k9E-V1-ZsZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                                    <color key="textColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sx-iY-v8L">
+                                                    <color key="backgroundColor" red="0.371218064557579" green="0.60540896045918369" blue="0.031751974108334802" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="73" id="7rr-U2-PeA"/>
+                                                        <constraint firstAttribute="height" constant="28" id="nD8-IV-b8U"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                                    <state key="normal" title="Price">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buyItem:" destination="jrk-tL-bfG" eventType="touchUpInside" id="gJM-pZ-nGj"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReZ-dU-62d">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Xyd-XO-4gT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDg-7S-Zxz">
+                                                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                                    <state key="normal" image="notFavorite.png">
+                                                        <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="Favorite.png"/>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="makeFavorite:" destination="jrk-tL-bfG" eventType="touchUpInside" id="RuG-wy-HN0"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ReZ-dU-62d" firstAttribute="top" secondItem="KDE-ak-jbN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="57Y-ZL-BgC"/>
+                                            <constraint firstItem="05o-4c-Wj8" firstAttribute="leading" secondItem="Jhb-ox-92t" secondAttribute="leading" constant="16" id="7sk-DW-y3f"/>
+                                            <constraint firstItem="05o-4c-Wj8" firstAttribute="top" secondItem="Jhb-ox-92t" secondAttribute="top" constant="4" id="HAQ-tR-jDe"/>
+                                            <constraint firstItem="ReZ-dU-62d" firstAttribute="leading" secondItem="KDE-ak-jbN" secondAttribute="leading" type="default" id="IM0-J9-6SW"/>
+                                            <constraint firstItem="ReZ-dU-62d" firstAttribute="leading" secondItem="4sx-iY-v8L" secondAttribute="leading" type="default" id="OBu-Fv-7bK"/>
+                                            <constraint firstItem="MDg-7S-Zxz" firstAttribute="top" secondItem="ReZ-dU-62d" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RC2-f5-2CD"/>
+                                            <constraint firstItem="KDE-ak-jbN" firstAttribute="trailing" secondItem="ReZ-dU-62d" secondAttribute="trailing" type="default" id="bCY-Ih-yvj"/>
+                                            <constraint firstAttribute="bottom" secondItem="4sx-iY-v8L" secondAttribute="bottom" constant="11" id="jVy-3e-cFj"/>
+                                            <constraint firstAttribute="trailing" secondItem="MDg-7S-Zxz" secondAttribute="trailing" constant="46" id="kWx-wA-wvy"/>
+                                            <constraint firstItem="dHB-fl-EaF" firstAttribute="centerX" secondItem="05o-4c-Wj8" secondAttribute="centerX" type="default" id="oHP-5J-Oge"/>
+                                            <constraint firstItem="dHB-fl-EaF" firstAttribute="centerY" secondItem="ReZ-dU-62d" secondAttribute="centerY" type="default" id="okd-MG-yMK"/>
+                                            <constraint firstItem="KDE-ak-jbN" firstAttribute="top" secondItem="Jhb-ox-92t" secondAttribute="top" constant="10" id="x1U-ql-Jby"/>
+                                            <constraint firstItem="KDE-ak-jbN" firstAttribute="leading" secondItem="Jhb-ox-92t" secondAttribute="leading" constant="132" id="zoq-zE-acv"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="9WQ-06-4NU">
+                                <cells>
+                                    <tableViewCell opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="shN-Z6-MZd" detailTextLabel="9WM-bm-t3e" style="IBUITableViewCellStyleValue2" id="UVG-gJ-unc">
+                                        <rect key="frame" x="0.0" y="142" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Rank" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="shN-Z6-MZd">
+                                                    <rect key="frame" x="10" y="14" width="67" height="18"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="13"/>
+                                                    <color key="textColor" red="0.32156862745098042" green="0.40000000000000002" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9WM-bm-t3e">
+                                                    <rect key="frame" x="83" y="12" width="36" height="20"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3Z2-LT-YNP" detailTextLabel="wle-f9-5a5" style="IBUITableViewCellStyleValue2" id="l1w-XB-zPf">
+                                        <rect key="frame" x="0.0" y="187" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Z2-LT-YNP">
+                                                    <rect key="frame" x="10" y="14" width="67" height="18"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="13"/>
+                                                    <color key="textColor" red="0.32156862745098042" green="0.40000000000000002" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wle-f9-5a5">
+                                                    <rect key="frame" x="83" y="12" width="36" height="20"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lFs-Dw-V97" detailTextLabel="Qt1-o7-Jyo" style="IBUITableViewCellStyleValue2" id="d7x-a4-wSu">
+                                        <rect key="frame" x="0.0" y="231" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Released" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lFs-Dw-V97">
+                                                    <rect key="frame" x="10" y="14" width="67" height="18"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="13"/>
+                                                    <color key="textColor" red="0.32156862745098042" green="0.40000000000000002" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qt1-o7-Jyo">
+                                                    <rect key="frame" x="83" y="12" width="36" height="20"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="TU0-Ok-7zV">
+                                <cells>
+                                    <tableViewCell opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sAW-BL-MiD">
+                                        <rect key="frame" x="0.0" y="296" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEC-sU-gwt">
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="hEC-sU-gwt" firstAttribute="top" secondItem="sAW-BL-MiD" secondAttribute="top" constant="10" type="user" id="CUE-pk-XMo"/>
+                                            <constraint firstItem="hEC-sU-gwt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sAW-BL-MiD" secondAttribute="top" constant="10" type="user" id="Fji-lG-IEn"/>
+                                            <constraint firstAttribute="trailing" secondItem="hEC-sU-gwt" secondAttribute="trailing" constant="30" type="user" id="KtO-rG-Lhw"/>
+                                            <constraint firstItem="hEC-sU-gwt" firstAttribute="centerX" secondItem="sAW-BL-MiD" secondAttribute="centerX" type="user" id="NXR-D4-Zt2"/>
+                                            <constraint firstAttribute="bottom" secondItem="hEC-sU-gwt" secondAttribute="bottom" constant="12" type="user" id="NXq-2N-8tA"/>
+                                            <constraint firstItem="hEC-sU-gwt" firstAttribute="leading" secondItem="sAW-BL-MiD" secondAttribute="leading" constant="30" type="user" id="fIb-2x-xXY"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="jrk-tL-bfG" id="Oo4-Qd-PgA"/>
+                            <outlet property="delegate" destination="jrk-tL-bfG" id="hhs-zj-Nry"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="DSK-VL-on4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="0rX-cx-WRi">
+                            <connections>
+                                <action selector="shareApp:" destination="jrk-tL-bfG" id="YkL-XM-7uA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="appTitle" destination="KDE-ak-jbN" id="pmd-we-JNu"/>
+                        <outlet property="artist" destination="ReZ-dU-62d" id="7JQ-qI-zw4"/>
+                        <outlet property="artworkImage" destination="05o-4c-Wj8" id="YlY-ik-ZCb"/>
+                        <outlet property="category" destination="wle-f9-5a5" id="WJu-RX-o76"/>
+                        <outlet property="favoriteButton" destination="MDg-7S-Zxz" id="HPi-VI-hBC"/>
+                        <outlet property="price" destination="4sx-iY-v8L" id="MeW-ai-mn8"/>
+                        <outlet property="rank" destination="9WM-bm-t3e" id="E05-yO-jmu"/>
+                        <outlet property="released" destination="Qt1-o7-Jyo" id="tfM-jR-RBZ"/>
+                        <outlet property="spinner" destination="dHB-fl-EaF" id="XTE-Tx-l7g"/>
+                        <outlet property="summary" destination="hEC-sU-gwt" id="cxl-ow-Wcd"/>
+                        <outlet property="summaryCell" destination="sAW-BL-MiD" id="zKL-be-LTQ"/>
+                        <outlet property="titleCell" destination="Jhb-ox-92t" id="oyK-h4-RHJ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sb1-iZ-hPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="-571"/>
+        </scene>
+        <!--Books Table View Controller - Books-->
+        <scene sceneID="GdL-IS-v2E">
+            <objects>
+                <tableViewController id="HuR-Cd-Olw" customClass="BooksTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" id="88F-u9-EJt">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Media Item" rowHeight="46" id="4zL-L8-M8C" customClass="ITunesMediaItemTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="XeD-f2-H7W"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnu-ky-tyG">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="QGn-w7-aeW"/>
+                                                <constraint firstAttribute="width" constant="200" id="Vgr-au-WOa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                            <color key="textColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPj-im-IuH">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="8Yx-nc-aab"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="13"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rank" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kb5-lU-uUy">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Det-Eh-T93"/>
+                                                <constraint firstAttribute="width" constant="36" id="R2X-cu-adS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCg-Wa-xaf">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="Qdr-o4-Hmu"/>
+                                                <constraint firstAttribute="height" constant="40" id="rfF-Jz-mFN"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="ZCg-Wa-xaf" firstAttribute="leading" secondItem="4zL-L8-M8C" secondAttribute="leading" constant="8" id="89a-mu-EIK"/>
+                                    <constraint firstItem="ZCg-Wa-xaf" firstAttribute="centerY" secondItem="4zL-L8-M8C" secondAttribute="centerY" type="default" id="9qS-3b-ccu"/>
+                                    <constraint firstItem="XeD-f2-H7W" firstAttribute="centerY" secondItem="ZCg-Wa-xaf" secondAttribute="centerY" type="default" id="BqY-HP-JRe"/>
+                                    <constraint firstItem="Cnu-ky-tyG" firstAttribute="trailing" secondItem="tPj-im-IuH" secondAttribute="trailing" type="default" id="Iap-RJ-2v2"/>
+                                    <constraint firstItem="Kb5-lU-uUy" firstAttribute="bottom" secondItem="XeD-f2-H7W" secondAttribute="bottom" type="default" id="Msi-YA-HjT"/>
+                                    <constraint firstItem="ZCg-Wa-xaf" firstAttribute="centerX" secondItem="XeD-f2-H7W" secondAttribute="centerX" type="default" id="RL2-Z9-JjC"/>
+                                    <constraint firstItem="Cnu-ky-tyG" firstAttribute="top" secondItem="4zL-L8-M8C" secondAttribute="top" type="default" id="S5U-7B-i5i"/>
+                                    <constraint firstItem="tPj-im-IuH" firstAttribute="leading" secondItem="ZCg-Wa-xaf" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="U5b-yM-jWl"/>
+                                    <constraint firstItem="Cnu-ky-tyG" firstAttribute="leading" secondItem="ZCg-Wa-xaf" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="eMI-ch-9mI"/>
+                                    <constraint firstItem="tPj-im-IuH" firstAttribute="top" secondItem="4zL-L8-M8C" secondAttribute="top" constant="20" type="default" id="kTE-km-LRL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kb5-lU-uUy" secondAttribute="trailing" constant="25" id="mPo-l0-t6u"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="mediaItemArtist" destination="tPj-im-IuH" id="dPO-Xf-f3E"/>
+                                    <outlet property="mediaItemImage" destination="ZCg-Wa-xaf" id="RRq-Ur-3na"/>
+                                    <outlet property="mediaItemRank" destination="Kb5-lU-uUy" id="0vi-f3-vac"/>
+                                    <outlet property="mediaItemTitle" destination="Cnu-ky-tyG" id="30T-6u-brg"/>
+                                    <outlet property="spinner" destination="XeD-f2-H7W" id="VnM-uN-MCF"/>
+                                    <segue destination="jrk-tL-bfG" kind="push" identifier="Show Details" id="zHQ-iL-m3a"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HuR-Cd-Olw" id="mBI-In-wh1"/>
+                            <outlet property="delegate" destination="HuR-Cd-Olw" id="ipB-Ee-IAJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Books" id="Mae-Da-phx"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="YQq-E8-p3I">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcf-jM-76X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="-571"/>
+        </scene>
+        <!--Episodes Table View Controller - TV-->
+        <scene sceneID="k05-uD-QfD">
+            <objects>
+                <tableViewController id="3fO-sZ-Hpv" customClass="TVEpisodesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" id="zLg-bI-Q6d">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Media Item" rowHeight="46" id="Rc7-hH-HJq" customClass="ITunesMediaItemTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-HH-1rM"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dom-CY-XUA">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="T6i-vt-PfI"/>
+                                                <constraint firstAttribute="height" constant="25" id="XCC-JZ-3Ke"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                            <color key="textColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fk5-2R-u1O">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="LPb-cr-6zT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="13"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rank" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvn-8W-Axk">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="2M5-Z5-h11"/>
+                                                <constraint firstAttribute="height" constant="21" id="8bo-za-LJa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLc-up-Qse">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="uLR-pA-Tbu"/>
+                                                <constraint firstAttribute="height" constant="40" id="v9K-qq-9K6"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="fk5-2R-u1O" firstAttribute="leading" secondItem="HLc-up-Qse" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="51J-gt-R1a"/>
+                                    <constraint firstItem="HLc-up-Qse" firstAttribute="leading" secondItem="Rc7-hH-HJq" secondAttribute="leading" constant="8" id="9FN-DV-A3D"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pvn-8W-Axk" secondAttribute="trailing" constant="26" id="E7h-4C-6rJ"/>
+                                    <constraint firstItem="V2b-HH-1rM" firstAttribute="centerY" secondItem="Rc7-hH-HJq" secondAttribute="centerY" type="default" id="VOm-mQ-ZKl"/>
+                                    <constraint firstItem="dom-CY-XUA" firstAttribute="leading" secondItem="HLc-up-Qse" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bYZ-kl-ZPe"/>
+                                    <constraint firstItem="V2b-HH-1rM" firstAttribute="centerY" secondItem="HLc-up-Qse" secondAttribute="centerY" type="default" id="dwy-RS-80v"/>
+                                    <constraint firstItem="fk5-2R-u1O" firstAttribute="top" secondItem="Rc7-hH-HJq" secondAttribute="top" constant="20" type="default" id="jPW-eI-lH8"/>
+                                    <constraint firstItem="dom-CY-XUA" firstAttribute="top" secondItem="Rc7-hH-HJq" secondAttribute="top" type="default" id="mXl-e6-YKO"/>
+                                    <constraint firstItem="V2b-HH-1rM" firstAttribute="centerX" secondItem="HLc-up-Qse" secondAttribute="centerX" type="default" id="pj6-Vg-dCb"/>
+                                    <constraint firstItem="Pvn-8W-Axk" firstAttribute="bottom" secondItem="V2b-HH-1rM" secondAttribute="bottom" type="default" id="wDi-ff-wpY"/>
+                                    <constraint firstItem="dom-CY-XUA" firstAttribute="trailing" secondItem="fk5-2R-u1O" secondAttribute="trailing" type="default" id="xWq-a9-arD"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="mediaItemArtist" destination="fk5-2R-u1O" id="hVt-EM-Gg9"/>
+                                    <outlet property="mediaItemImage" destination="HLc-up-Qse" id="w9I-Vo-gNE"/>
+                                    <outlet property="mediaItemRank" destination="Pvn-8W-Axk" id="xeN-2h-BM7"/>
+                                    <outlet property="mediaItemTitle" destination="dom-CY-XUA" id="rfs-eT-ipR"/>
+                                    <outlet property="spinner" destination="V2b-HH-1rM" id="32D-MU-HjP"/>
+                                    <segue destination="jrk-tL-bfG" kind="push" identifier="Show Details" id="KcA-93-qa5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3fO-sZ-Hpv" id="gSe-zK-tAc"/>
+                            <outlet property="delegate" destination="3fO-sZ-Hpv" id="Vvh-hW-WUs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TV" id="mPB-Ts-wOq"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="RRD-q4-lxj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHh-aP-DzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="625"/>
+        </scene>
+        <!--TunesU Courses Table View Controller - iTunes U-->
+        <scene sceneID="X34-MW-py4">
+            <objects>
+                <tableViewController id="qjG-LO-Pxh" customClass="ITunesUCoursesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" id="egx-8Y-wVA">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Media Item" rowHeight="46" id="yBV-qn-yqz" customClass="ITunesMediaItemTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="t2Y-MH-KUG"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhr-Di-WQw">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="HuF-xo-1ZY"/>
+                                                <constraint firstAttribute="height" constant="25" id="jIZ-dr-Q3H"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                            <color key="textColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN6-EP-xT2">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="QsR-cR-ZZB"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="13"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rank" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA8-YQ-wEh">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="555-HU-7u8"/>
+                                                <constraint firstAttribute="width" constant="36" id="gN2-WS-v8q"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTv-Cd-mc0">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="fMp-Wm-etx"/>
+                                                <constraint firstAttribute="width" constant="40" id="vwi-Zy-EMU"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="QA8-YQ-wEh" secondAttribute="trailing" constant="26" id="A9j-1d-ypm"/>
+                                    <constraint firstItem="RN6-EP-xT2" firstAttribute="top" secondItem="yBV-qn-yqz" secondAttribute="top" constant="20" type="default" id="B4c-HL-4fx"/>
+                                    <constraint firstItem="RN6-EP-xT2" firstAttribute="leading" secondItem="NTv-Cd-mc0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="CPk-JO-ekg"/>
+                                    <constraint firstItem="Lhr-Di-WQw" firstAttribute="trailing" secondItem="RN6-EP-xT2" secondAttribute="trailing" type="default" id="JJv-wg-avg"/>
+                                    <constraint firstItem="t2Y-MH-KUG" firstAttribute="centerX" secondItem="NTv-Cd-mc0" secondAttribute="centerX" type="default" id="PV6-lQ-S5v"/>
+                                    <constraint firstItem="QA8-YQ-wEh" firstAttribute="bottom" secondItem="t2Y-MH-KUG" secondAttribute="bottom" type="default" id="T4r-fB-bm2"/>
+                                    <constraint firstItem="NTv-Cd-mc0" firstAttribute="leading" secondItem="yBV-qn-yqz" secondAttribute="leading" constant="8" id="ce9-Jy-pAa"/>
+                                    <constraint firstItem="NTv-Cd-mc0" firstAttribute="centerY" secondItem="yBV-qn-yqz" secondAttribute="centerY" type="default" id="gb2-NU-syL"/>
+                                    <constraint firstItem="Lhr-Di-WQw" firstAttribute="leading" secondItem="NTv-Cd-mc0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qRB-l7-t7K"/>
+                                    <constraint firstItem="t2Y-MH-KUG" firstAttribute="centerY" secondItem="NTv-Cd-mc0" secondAttribute="centerY" type="default" id="vIB-vP-1Eo"/>
+                                    <constraint firstItem="Lhr-Di-WQw" firstAttribute="top" secondItem="yBV-qn-yqz" secondAttribute="top" type="default" id="wJa-sp-dQA"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="mediaItemArtist" destination="RN6-EP-xT2" id="4Mt-QO-8Xx"/>
+                                    <outlet property="mediaItemImage" destination="NTv-Cd-mc0" id="BF7-E9-zX1"/>
+                                    <outlet property="mediaItemRank" destination="QA8-YQ-wEh" id="nfU-oA-mLP"/>
+                                    <outlet property="mediaItemTitle" destination="Lhr-Di-WQw" id="LJ7-V3-Kf6"/>
+                                    <outlet property="spinner" destination="t2Y-MH-KUG" id="kda-pp-Omx"/>
+                                    <segue destination="jrk-tL-bfG" kind="push" identifier="Show Details" id="woa-jU-4qd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qjG-LO-Pxh" id="9qV-TN-zZl"/>
+                            <outlet property="delegate" destination="qjG-LO-Pxh" id="m8d-mF-Mh7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="iTunes U" id="JxH-kt-ynx"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="mS7-ds-3zx">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GoA-D9-TLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="1233"/>
+        </scene>
+        <!--Movies Table View Controller - Movies-->
+        <scene sceneID="thf-P1-qv0">
+            <objects>
+                <tableViewController id="ZZ4-bQ-sMO" customClass="MoviesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" id="y6O-B1-Q4R">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Media Item" rowHeight="46" id="vp9-dR-sFq" customClass="ITunesMediaItemTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="bmk-cN-epp"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td3-8p-5dJ">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="FPI-g3-x2b"/>
+                                                <constraint firstAttribute="height" constant="25" id="iPh-7z-5U9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                            <color key="textColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7c-Yf-5dZ">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="5eH-ls-NeM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="13"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rank" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMr-Vj-u5W">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="Z2G-LT-RoV"/>
+                                                <constraint firstAttribute="height" constant="21" id="igf-Jp-jy0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shb-gA-Tl5">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="6CO-te-P2H"/>
+                                                <constraint firstAttribute="width" constant="40" id="8vR-7Q-joZ"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="bmk-cN-epp" firstAttribute="centerY" secondItem="vp9-dR-sFq" secondAttribute="centerY" type="default" id="65p-qs-O2c"/>
+                                    <constraint firstItem="td3-8p-5dJ" firstAttribute="top" secondItem="vp9-dR-sFq" secondAttribute="top" type="default" id="6bJ-Xh-bta"/>
+                                    <constraint firstItem="td3-8p-5dJ" firstAttribute="leading" secondItem="Shb-gA-Tl5" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="7AN-aM-R6F"/>
+                                    <constraint firstItem="A7c-Yf-5dZ" firstAttribute="top" secondItem="vp9-dR-sFq" secondAttribute="top" constant="20" type="default" id="97U-BN-YfR"/>
+                                    <constraint firstItem="FMr-Vj-u5W" firstAttribute="bottom" secondItem="bmk-cN-epp" secondAttribute="bottom" type="default" id="DXt-Li-ZFD"/>
+                                    <constraint firstItem="A7c-Yf-5dZ" firstAttribute="leading" secondItem="Shb-gA-Tl5" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="RgB-4B-xIn"/>
+                                    <constraint firstItem="Shb-gA-Tl5" firstAttribute="leading" secondItem="vp9-dR-sFq" secondAttribute="leading" constant="8" id="Stb-s8-8HE"/>
+                                    <constraint firstItem="bmk-cN-epp" firstAttribute="centerY" secondItem="Shb-gA-Tl5" secondAttribute="centerY" type="default" id="ZzC-x6-SBO"/>
+                                    <constraint firstItem="td3-8p-5dJ" firstAttribute="trailing" secondItem="A7c-Yf-5dZ" secondAttribute="trailing" type="default" id="bQC-sR-9Un"/>
+                                    <constraint firstItem="bmk-cN-epp" firstAttribute="centerX" secondItem="Shb-gA-Tl5" secondAttribute="centerX" type="default" id="qu1-kO-loq"/>
+                                    <constraint firstAttribute="trailing" secondItem="FMr-Vj-u5W" secondAttribute="trailing" constant="26" id="sOZ-nU-4yj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="mediaItemArtist" destination="A7c-Yf-5dZ" id="awY-E0-5jI"/>
+                                    <outlet property="mediaItemImage" destination="Shb-gA-Tl5" id="NJN-V0-0fO"/>
+                                    <outlet property="mediaItemRank" destination="FMr-Vj-u5W" id="ZGP-42-fU5"/>
+                                    <outlet property="mediaItemTitle" destination="td3-8p-5dJ" id="vIx-co-4Jr"/>
+                                    <outlet property="spinner" destination="bmk-cN-epp" id="OBi-8d-Plb"/>
+                                    <segue destination="jrk-tL-bfG" kind="push" identifier="Show Details" id="KkH-ST-SZm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZZ4-bQ-sMO" id="7zx-RT-orM"/>
+                            <outlet property="delegate" destination="ZZ4-bQ-sMO" id="345-WV-d7o"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Movies" id="L2k-vU-Mr8"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="cDl-kt-Fvj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KeA-zE-E1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="21"/>
+        </scene>
+        <!--Albums Table View Controller - Albums-->
+        <scene sceneID="LWm-tM-RDE">
+            <objects>
+                <tableViewController id="9eb-Wa-fUE" customClass="AlbumsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" id="ESW-nm-xwb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Media Item" rowHeight="46" id="dBH-25-9V1" customClass="ITunesMediaItemTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="du3-j1-1Mf"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avS-l2-9AU">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="MeH-EO-ZoQ"/>
+                                                <constraint firstAttribute="height" constant="25" id="TkX-6a-vmS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                            <color key="textColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EU-I9-usz">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="S7Q-d9-h9E"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="13"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rank" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fM-Ab-OcG">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="YGe-Mt-HRv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyq-Ty-03Z">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Arv-fj-Fr3"/>
+                                                <constraint firstAttribute="width" constant="40" id="cLS-J6-rSj"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="du3-j1-1Mf" firstAttribute="centerY" secondItem="3fM-Ab-OcG" secondAttribute="centerY" type="default" id="1zl-wV-TtW"/>
+                                    <constraint firstItem="avS-l2-9AU" firstAttribute="trailing" secondItem="6EU-I9-usz" secondAttribute="trailing" type="default" id="2Ry-Wm-TvC"/>
+                                    <constraint firstItem="6EU-I9-usz" firstAttribute="top" secondItem="dBH-25-9V1" secondAttribute="top" constant="20" type="default" id="8gv-mh-4sd"/>
+                                    <constraint firstAttribute="trailing" secondItem="3fM-Ab-OcG" secondAttribute="trailing" constant="25" id="B6Z-B2-blX"/>
+                                    <constraint firstItem="du3-j1-1Mf" firstAttribute="centerY" secondItem="iyq-Ty-03Z" secondAttribute="centerY" type="default" id="BIj-92-MRa"/>
+                                    <constraint firstItem="du3-j1-1Mf" firstAttribute="top" secondItem="3fM-Ab-OcG" secondAttribute="top" type="default" id="GJW-Sz-863"/>
+                                    <constraint firstItem="avS-l2-9AU" firstAttribute="leading" secondItem="iyq-Ty-03Z" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="PZ1-ou-J9l"/>
+                                    <constraint firstItem="iyq-Ty-03Z" firstAttribute="leading" secondItem="dBH-25-9V1" secondAttribute="leading" constant="8" id="Sz6-Oe-dD2"/>
+                                    <constraint firstItem="du3-j1-1Mf" firstAttribute="centerX" secondItem="iyq-Ty-03Z" secondAttribute="centerX" type="default" id="bEL-Px-obZ"/>
+                                    <constraint firstItem="6EU-I9-usz" firstAttribute="leading" secondItem="iyq-Ty-03Z" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="hHT-qL-W5G"/>
+                                    <constraint firstItem="iyq-Ty-03Z" firstAttribute="centerY" secondItem="dBH-25-9V1" secondAttribute="centerY" type="default" id="kP3-7B-evA"/>
+                                    <constraint firstItem="avS-l2-9AU" firstAttribute="top" secondItem="dBH-25-9V1" secondAttribute="top" type="default" id="vgp-mV-sOy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="mediaItemArtist" destination="6EU-I9-usz" id="MKV-rZ-W17"/>
+                                    <outlet property="mediaItemImage" destination="iyq-Ty-03Z" id="Q5t-i6-aFq"/>
+                                    <outlet property="mediaItemRank" destination="3fM-Ab-OcG" id="prd-7b-F3v"/>
+                                    <outlet property="mediaItemTitle" destination="avS-l2-9AU" id="TPb-zu-F17"/>
+                                    <outlet property="spinner" destination="du3-j1-1Mf" id="zx7-pY-h2g"/>
+                                    <segue destination="jrk-tL-bfG" kind="push" identifier="Show Details" id="ffK-WC-HTy"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9eb-Wa-fUE" id="vA4-FT-X12"/>
+                            <outlet property="delegate" destination="9eb-Wa-fUE" id="oX6-x6-Xcb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Albums" id="ZMA-T3-b72"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="1OZ-1Q-ZfQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wN2-aq-Lc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="-1167"/>
+        </scene>
+        <!--Navigation Controller - Free Apps-->
+        <scene sceneID="WgM-AZ-5lI">
+            <objects>
+                <navigationController id="wd5-YH-yta" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Free Apps" image="freeapps.png" id="eWW-Fb-Gu5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wx3-KM-0Dv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rxV-pe-8cL">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="aAM-5S-sNQ" kind="relationship" relationship="rootViewController" id="Qiu-2A-46A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mo5-xJ-xqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="-1750"/>
+        </scene>
+        <!--Navigation Controller - Albums-->
+        <scene sceneID="RHd-lA-Wv3">
+            <objects>
+                <navigationController id="gpS-L7-V3g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Albums" image="albums.png" id="0mo-yu-ogb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qW3-2p-6xP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9eb-Wa-fUE" kind="relationship" relationship="rootViewController" id="Lzt-F2-6eL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMO-Oq-cZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="-1167"/>
+        </scene>
+        <!--Navigation Controller - Books-->
+        <scene sceneID="AG8-Bx-74I">
+            <objects>
+                <navigationController id="H4B-zC-B7M" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Books" image="books.png" id="Hcj-7N-l9H"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hD4-8O-V9R">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HuR-Cd-Olw" kind="relationship" relationship="rootViewController" id="fzs-ER-PYd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kg9-PN-qsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="-571"/>
+        </scene>
+        <!--Navigation Controller - Movies-->
+        <scene sceneID="hIs-z8-e3E">
+            <objects>
+                <navigationController id="hhK-tZ-nzk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" image="movies.png" id="DpF-0m-SMn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PGC-Sa-Qwn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZZ4-bQ-sMO" kind="relationship" relationship="rootViewController" id="9NH-ot-Wim"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0F-mH-Vmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="21"/>
+        </scene>
+        <!--Navigation Controller - TV-->
+        <scene sceneID="4bm-na-vD6">
+            <objects>
+                <navigationController id="arF-60-yWP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TV" image="tv.png" id="MdA-2i-A3x"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zCE-vy-eX5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3fO-sZ-Hpv" kind="relationship" relationship="rootViewController" id="nM3-A2-775"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qd4-ek-nCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="625"/>
+        </scene>
+        <!--Navigation Controller - iTunesU-->
+        <scene sceneID="m8x-C9-ZYS">
+            <objects>
+                <navigationController id="rc9-Rv-KTK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="iTunesU" image="itunesu.png" id="gwD-AC-nlS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uUE-TR-iBp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qjG-LO-Pxh" kind="relationship" relationship="rootViewController" id="Tsc-eg-5He"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Faf-8D-APL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="1233"/>
+        </scene>
+        <!--Navigation Controller - Favorites-->
+        <scene sceneID="EPO-NK-VbG">
+            <objects>
+                <navigationController id="qKR-6L-7hU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorites.png" id="T1p-ST-Vve"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QcL-4H-A42">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M4i-uI-nKL" kind="relationship" relationship="rootViewController" id="ji3-x6-5cb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="McS-89-2QB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="-2364"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Favorite.png" width="32" height="32"/>
+        <image name="albums.png" width="15" height="24"/>
+        <image name="books.png" width="18" height="26"/>
+        <image name="favorites.png" width="30" height="30"/>
+        <image name="freeapps.png" width="16" height="28"/>
+        <image name="itunesu.png" width="30" height="23"/>
+        <image name="movies.png" width="19" height="25"/>
+        <image name="notFavorite.png" width="32" height="32"/>
+        <image name="tv.png" width="24" height="24"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="woa-jU-4qd"/>
+    </inferredMetricsTieBreakers>
+</document>
